@@ -23,3 +23,8 @@ git reset HEAD (filename) | unstage a file (can find this when you run git statu
 
 git checkout -- (file) : revert a file PERMANENTLY back to what it was at last commit
 (can also find this command with git status)
+
+git remote : lists shortnames of all the remotes the user has handled
+adding '-v' lists urls of the remotes
+
+git push (remote) (your_branch) : push your local changes to the remote
