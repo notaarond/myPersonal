@@ -1,0 +1,25 @@
+git init : start your first commit in current directory
+
+git clone : allows you to add a remote repository via http url
+
+git status : lists untracked files, modified files, removed files, renamed files, and more
+
+git add : add files to staging area to be committed
+
+git diff : allows you to view the changes made to files from last commit
+add the key word '--staged' to see staged items vs last commit ('--cached' is also the same thing)
+
+git commit : could use this to commit what's in your staged directory, but I recommend adding the keyword '-m (commit message)' to make things easier on yourself
+
+git rm : removes a file so that it isn't tracked (the 'rm' command simply removes the file from the working directory)
+
+git mv (file1) (file2): basically renames the files, but is really a move command
+
+git log: allows you to see the commit history (has a ton of other options for output, but I'm not going to use it to that complexity anyways)
+
+git commit --amend : takes current staging area and uses it to completely replace the previous commit, including message
+
+git reset HEAD (filename) | unstage a file (can find this when you run git status)
+
+git checkout -- (file) : revert a file PERMANENTLY back to what it was at last commit
+(can also find this command with git status)
