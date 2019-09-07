@@ -26,5 +26,11 @@ git checkout -- (file) : revert a file PERMANENTLY back to what it was at last c
 
 git remote : lists shortnames of all the remotes the user has handled
 adding '-v' lists urls of the remotes
+adding 'add (shortname) (url)' to 'git remote' allows you to add a repo with a name
+adding 'remove (reponame)' to 'git remote' removes the remote
 
 git push (remote) (your_branch) : push your local changes to the remote
+
+git fetch: downloads data from online repo to local, but does not merge data to your current brach
+
+git pull: fetches data from online repo then merges with local automatically
