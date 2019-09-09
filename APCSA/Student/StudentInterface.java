@@ -1,4 +1,4 @@
-import TerminalIO.KeyboardReader;
+import java.util.Scanner;
 
 public class StudentInterface{
 
@@ -6,25 +6,29 @@ public class StudentInterface{
       // Instantiate the students and the keyboard object
       Student student1 = new Student();
       Student student2 = new Student();
-      KeyboardReader reader = new KeyboardReader();
+      Scanner reader = new Scanner(System.in);
 
       String name;
       int score;
 
       // Input the first student's data
-      name = reader.readLine("Enter the first student's name: ");
+      System.out.println("Enter the first student's name: ");
+      name = reader.next();
       student1.setName(name);
       for (int i = 1; i <= 3; i++){
-         score = reader.readInt("Enter the student's score: ");
-         student1.setScore(i, score);
+        System.out.println("Enter the student's score: ");
+        score = reader.nextInt();
+        student1.setScore(i, score);
       }
 
       // Input the second student's data
-      name = reader.readLine("Enter the second student's name: ");
+      System.out.println("Enter the second student's name: ");
+      name = reader.next();
       student2.setName(name);
       for (int i = 1; i <= 3; i++){
-         score = reader.readInt("Enter the student's score: ");
-         student2.setScore(i, score);
+        System.out.println("Enter the student's score: ");
+        score = reader.nextInt();
+        student2.setScore(i, score);
       }
 
       // Output the two students' information
@@ -40,7 +44,7 @@ public class StudentInterface{
          score = student2.getHighScore();
       }
       System.out.println(name + " has the highest score: " + score);
-      
+
       // Output the student with the highest average score
       if (student1.getAverage() > student2.getAverage()){
          name = student1.getName();
@@ -52,4 +56,3 @@ public class StudentInterface{
       System.out.println(name + " has the highest average score: " + score);
    }
 }
-
