@@ -34,3 +34,4 @@ git push (remote) (your_branch) : push your local changes to the remote
 git fetch: downloads data from online repo to local, but does not merge data to your current brach
 
 git pull: fetches data from online repo then merges with local automatically
+syntax is 'git pull (remote)'
