@@ -56,10 +56,11 @@ public class TestStudent{
         System.out.println("\n");
       }
 
+      //s4 is instantiated with no name and standard values
       Student s4 = new Student();
-      //s4.setName("Hi");
-      s4.setScore(1, -5);
+      s4.setScore(1, -5); //s4 is given a test score that is invalid
 
+      //s4 has no name and an invalid test score, should report both of those cases
       result = s4.validateData();
       if (result == null)
       {

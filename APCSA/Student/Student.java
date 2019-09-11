@@ -78,21 +78,26 @@ public class Student {
    }
 
    public String validateData(){
-     String errorMessage = null;
+     String errorMessage = null; //string is set to null by default, that way if nothing is wrong, it just returns
+
+     //if name is empty, sets errorMessage to Name Required
      if(name == "")
      {
        errorMessage = "Sorry: Name Required";
      }
+
+     //if any of test scores are greater than 100 or less than 0, adds String to errorMessage
      if(( test1 > 100 || test1 < 0 ) || (test2 > 100 || test2 < 0) || (test3 > 100 || test3 < 0) )
      {
-       if(name == ""){
+       if(name == ""){ //if it's already a string, just append
           errorMessage += "\nSorry: must have 0 <= test score <= 100";
         }
-       else
+       else // it's not a string yet, set it to a string literal
        {
          errorMessage = "Sorry: must have 0 <= test score <= 100";
        }
      }
+     
      return errorMessage;
    }
 
