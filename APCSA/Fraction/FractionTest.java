@@ -1,4 +1,4 @@
-//091219 Aaron De Castro
+//091319 Aaron De Castro #216026
 import java.util.Scanner;
 
 public class FractionTest
