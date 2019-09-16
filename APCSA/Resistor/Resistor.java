@@ -14,7 +14,10 @@ public class Resistor{
     nomR = r;
     tol = t;
 
-    //((1 - tol)* nomR) >= actual resistance <=  ((1 + tol) * nomR), so...
+    //((1 - tol)* nomR) >= actual resistance <=  ((1 + tol) * nomR)
+    //Random object.nextInt(limit) returns values within 0 and limit
+    //objectRand.nextInt(2 * (int)(tol * nomR)) gives difference between lower and upper limit
+    //"                                       " + ((1-tol) * nomR) sets diff, then sets it to lowest value to obtain true bounds
 
     
 

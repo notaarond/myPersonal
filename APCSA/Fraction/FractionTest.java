@@ -30,5 +30,7 @@ public class FractionTest
     System.out.println("\nSubtracting both: \n" + f1.subtract(f2));
     System.out.println("\nMultiplying both: \n" + f1.multiply(f2));
     System.out.println("\nDividing both: \n" + f1.divide(f2));
+
+    System.out.println("\nDividing both: \n" + f1.doubleFrac());
   }
 }

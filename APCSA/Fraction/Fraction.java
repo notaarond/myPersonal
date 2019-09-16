@@ -76,6 +76,11 @@ public class Fraction
     return sum;
   }
 
+  public Fraction doubleFrac(){
+    
+    return this.add(this);
+
+  }
   //public Fraction simplify(){}
 
   public String toString()
