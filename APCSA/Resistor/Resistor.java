@@ -16,11 +16,11 @@ public class Resistor{
 
     //((1 - tol)* nomR) >= actual resistance <=  ((1 + tol) * nomR)
     //Random object.nextInt(limit) returns values within 0 and limit
-    //objectRand.nextInt(2 * (int)(tol * nomR)) gives difference between lower and upper limit
+    //objectRand.nextInt((2 * (int)(tol * nomR)) + 1 ) gives difference between lower and upper limit then adds 1 since upper bound is exclusive(doesn't include upper bound number)
     //"                                       " + ((1-tol) * nomR) sets diff, then sets it to lowest value to obtain true bounds
 
-    
-
+    Random randNum = new Random();
+    actR = randNum.nextInt((2 * (int)(tol * nomR)) + 1) + (int)((1 - tol) * nomR);
   }
 
   public void setNomRes(int r) { nomR = r; }
