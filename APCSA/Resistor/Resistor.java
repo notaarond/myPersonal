@@ -43,7 +43,7 @@ public class Resistor{
     // first two band checks
     for(int i = 0; i < 2; i++) //Resistors only have values up to their second digit, iterates through first
     {
-      //if(i == 0 || i == 1) { output += resistance; }
+      //if(i == 0 || i == 1) { output += resistance; } //ignore, test code
 
       if(resistance.charAt(i) == '.' || (resistance.charAt(0) == '0' && resistance.charAt(i) == '0')){
         i--;
@@ -100,4 +100,13 @@ public class Resistor{
 
     return output;
   }
+
+  public String toString(){
+    String output = "Nominal Resistance: " + nomR +
+                    "\nTolerance: " + tol +
+                    "\nActual Resistance: " + actR;
+
+    return output;
+  }
+
 }
