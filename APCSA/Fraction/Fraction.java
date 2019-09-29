@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class Fraction
 {
-  //states
-  private int numerator;
-  private int denominator;
+  //states, protected for access by child MixedNumber
+  protected int numerator;
+  protected int denominator;
 
   //Constructor with rejection algorithm for undefined fractions( number divided by 0 )
   public Fraction(int n, int d)
@@ -77,7 +77,7 @@ public class Fraction
   }
 
   public Fraction doubleFrac(){
-    
+
     return this.add(this);
 
   }
